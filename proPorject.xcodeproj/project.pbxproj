@@ -22,6 +22,8 @@
 		9D567A13181AC110003D6A4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5679F2181AC110003D6A4A /* UIKit.framework */; };
 		9D567A1B181AC110003D6A4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D567A19181AC110003D6A4A /* InfoPlist.strings */; };
 		9D567A1D181AC110003D6A4A /* proPorjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D567A1C181AC110003D6A4A /* proPorjectTests.m */; };
+		9DB54B231824B4D90030540F /* YGCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB54B221824B4D90030540F /* YGCalendar.m */; };
+		9DB54B2A182680D50030540F /* NSDateFormatter+shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB54B29182680D50030540F /* NSDateFormatter+shared.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		9D567A18181AC110003D6A4A /* proPorjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "proPorjectTests-Info.plist"; sourceTree = "<group>"; };
 		9D567A1A181AC110003D6A4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D567A1C181AC110003D6A4A /* proPorjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = proPorjectTests.m; sourceTree = "<group>"; };
+		9DB54B211824B4D90030540F /* YGCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGCalendar.h; sourceTree = "<group>"; };
+		9DB54B221824B4D90030540F /* YGCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCalendar.m; sourceTree = "<group>"; };
+		9DB54B28182680D50030540F /* NSDateFormatter+shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+shared.h"; sourceTree = "<group>"; };
+		9DB54B29182680D50030540F /* NSDateFormatter+shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+shared.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				9D567A04181AC110003D6A4A /* YGFirstViewController.m */,
 				9D567A06181AC110003D6A4A /* YGSecondViewController.h */,
 				9D567A07181AC110003D6A4A /* YGSecondViewController.m */,
+				9DB54B211824B4D90030540F /* YGCalendar.h */,
+				9DB54B221824B4D90030540F /* YGCalendar.m */,
+				9DB54B28182680D50030540F /* NSDateFormatter+shared.h */,
+				9DB54B29182680D50030540F /* NSDateFormatter+shared.m */,
 				9D567A09181AC110003D6A4A /* Images.xcassets */,
 				9D5679F5181AC110003D6A4A /* Supporting Files */,
 			);
@@ -257,6 +267,8 @@
 			files = (
 				9D5679FF181AC110003D6A4A /* YGAppDelegate.m in Sources */,
 				9D567A05181AC110003D6A4A /* YGFirstViewController.m in Sources */,
+				9DB54B2A182680D50030540F /* NSDateFormatter+shared.m in Sources */,
+				9DB54B231824B4D90030540F /* YGCalendar.m in Sources */,
 				9D567A08181AC110003D6A4A /* YGSecondViewController.m in Sources */,
 				9D5679FB181AC110003D6A4A /* main.m in Sources */,
 			);
@@ -385,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "proPorject/proPorject-Prefix.pch";
 				INFOPLIST_FILE = "proPorject/proPorject-Info.plist";
@@ -398,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "proPorject/proPorject-Prefix.pch";
 				INFOPLIST_FILE = "proPorject/proPorject-Info.plist";
@@ -467,6 +481,7 @@
 				9D567A22181AC110003D6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D567A23181AC110003D6A4A /* Build configuration list for PBXNativeTarget "proPorjectTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +490,7 @@
 				9D567A25181AC110003D6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

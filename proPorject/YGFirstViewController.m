@@ -17,8 +17,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDate *date = [NSDate date];
+    NSLog(@"%ld-%ld-%ld",(long)date.year,(long)date.month,(long)date.day);
+    
+    for (int i=0 ; i<7; i++) {
+        NSLog(@"weekDay = %@",[date descriptionWithLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]]);
+        NSLog(@"%ld-%ld-%ld",(long)date.year,(long)date.month,(long)date.day);
+
+        date = [date dateByAddingTimeInterval:-60*60*24];
+    }
+
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning
 {

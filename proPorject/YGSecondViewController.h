@@ -10,4 +10,5 @@
 
 @interface YGSecondViewController : UIViewController
 
+
 @end
