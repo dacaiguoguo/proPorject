@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@interface NSCalendar (standard)
++ (NSCalendar *)standardCalendar;
+@end
+
+
 @interface NSDateFormatter (shared)
 + (NSDateFormatter *)sharedFormatter;
 
@@ -20,4 +25,6 @@
 /* 取得 self 本月的1日是周几 */
 -(NSUInteger)firstWeekDayInMonth;
 +(NSDate *)dateStartOfDay:(NSDate *)date ;
++(NSDate *)dateStartOfWeek;
++(NSDate *)dateStartOfWeekWithDay:(NSDate *)aDate;
 @end

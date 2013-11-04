@@ -7,6 +7,24 @@
 //
 
 #import "NSDateFormatter+shared.h"
+
+@implementation NSCalendar (standard)
+
++ (NSCalendar *)standardCalendar{
+    static NSCalendar *gregorian = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        gregorian = [[NSCalendar alloc]
+                     initWithCalendarIdentifier:NSGregorianCalendar];
+        [gregorian setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+        
+    });
+    return gregorian;
+}
+
+
+@end
+
 @implementation NSDateFormatter (shared)
 
 + (NSDateFormatter *)sharedFormatter{
@@ -30,35 +48,24 @@
 
 @implementation NSDate (method)
 
-+ (NSCalendar *)standardCalendar{
-    static NSCalendar *gregorian = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        gregorian = [[NSCalendar alloc]
-                                 initWithCalendarIdentifier:NSGregorianCalendar];
-        [gregorian setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
-
-    });
-    return gregorian;
-}
 
 - (NSInteger)day{
-    NSDateComponents *components = [[NSDate standardCalendar] components:NSDayCalendarUnit fromDate:self];
+    NSDateComponents *components = [[NSCalendar standardCalendar] components:NSDayCalendarUnit fromDate:self];
     return [components day];
 }
 
 - (NSInteger)month{
-    NSDateComponents *components = [[NSDate standardCalendar] components:NSMonthCalendarUnit fromDate:self];
+    NSDateComponents *components = [[NSCalendar standardCalendar] components:NSMonthCalendarUnit fromDate:self];
     return [components month];
 }
 - (NSInteger)year{
-    NSDateComponents *components = [[NSDate standardCalendar] components:NSYearCalendarUnit fromDate:self];
+    NSDateComponents *components = [[NSCalendar standardCalendar] components:NSYearCalendarUnit fromDate:self];
     return [components year];
 }
 
 
 -(NSUInteger)firstWeekDayInMonth {
-    NSCalendar *gregorian = [NSDate standardCalendar];
+    NSCalendar *gregorian = [NSCalendar standardCalendar];
     [gregorian setFirstWeekday:2]; //monday is first day
     [gregorian setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
     //Set date to first of month
@@ -72,13 +79,36 @@
 
 +(NSDate *)dateStartOfDay:(NSDate *)date {
     NSDateComponents *components =
-    [[NSDate standardCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit |
+    [[NSCalendar standardCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit |
                            NSDayCalendarUnit) fromDate: date];
-    return [[NSDate standardCalendar] dateFromComponents:components];
+    return [[NSCalendar standardCalendar] dateFromComponents:components];
 }
 
-//- (NSString *)descriptionWithLocale:(id)locale{
-//    return nil;
-//}
+
+
++(NSDate *)dateStartOfWeek {
+    return [NSDate dateStartOfWeekWithDay:[NSDate date]];
+}
+
++(NSDate *)dateStartOfWeekWithDay:(NSDate *)aDate {
+    NSCalendar *gregorian = [NSCalendar standardCalendar];
+    [gregorian setFirstWeekday:2]; //monday is first day
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:aDate];
+    
+    NSDateComponents *componentsToSubtract = [[NSDateComponents alloc] init];
+    [componentsToSubtract setDay: - ((([components weekday] - [gregorian firstWeekday])
+                                      + 7 ) % 7)];
+    NSDate *beginningOfWeek = [gregorian dateByAddingComponents:componentsToSubtract toDate:aDate options:0];
+    
+    NSDateComponents *componentsStripped = [gregorian components: (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit)
+                                                        fromDate: beginningOfWeek];
+    
+    //gestript 剥离
+    beginningOfWeek = [gregorian dateFromComponents: componentsStripped];
+    
+    return beginningOfWeek;
+}
+
 
 @end
