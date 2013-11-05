@@ -111,4 +111,23 @@
 }
 
 
++(NSDate *)dateEndOfWeek {
+    NSCalendar *gregorian =[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    
+    
+    NSDateComponents *componentsToAdd = [[NSDateComponents alloc] init];
+    [componentsToAdd setDay: + (((([components weekday] - [gregorian firstWeekday])
+                                  + 7 ) % 7))+6];
+    NSDate *endOfWeek = [gregorian dateByAddingComponents:componentsToAdd toDate:[NSDate date] options:0];
+    
+    NSDateComponents *componentsStripped = [gregorian components: (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit)
+                                                        fromDate: endOfWeek];
+    
+    //gestript
+    endOfWeek = [gregorian dateFromComponents: componentsStripped];
+    return endOfWeek;
+}
+
 @end

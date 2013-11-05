@@ -88,6 +88,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D237CCF1829313E00F78062 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9D567A09181AC110003D6A4A /* Images.xcassets */,
+				9D5679F7181AC110003D6A4A /* InfoPlist.strings */,
+				9D5679FA181AC110003D6A4A /* main.m */,
+				9D5679F6181AC110003D6A4A /* proPorject-Info.plist */,
+				9D5679FC181AC110003D6A4A /* proPorject-Prefix.pch */,
+				9D5679FD181AC110003D6A4A /* YGAppDelegate.h */,
+				9D5679FE181AC110003D6A4A /* YGAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		9D237CD01829314B00F78062 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D567A00181AC110003D6A4A /* Main.storyboard */,
+				9D567A03181AC110003D6A4A /* YGFirstViewController.h */,
+				9D567A04181AC110003D6A4A /* YGFirstViewController.m */,
+				9D567A06181AC110003D6A4A /* YGSecondViewController.h */,
+				9D567A07181AC110003D6A4A /* YGSecondViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9D237CD11829319E00F78062 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9DB54B211824B4D90030540F /* YGCalendar.h */,
+				9DB54B221824B4D90030540F /* YGCalendar.m */,
+				9DB54B28182680D50030540F /* NSDateFormatter+shared.h */,
+				9DB54B29182680D50030540F /* NSDateFormatter+shared.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		9D237CD3182931E500F78062 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9D237CD4182931F300F78062 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		9D237CD51829323300F78062 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
 		9D5679E2181AC110003D6A4A = {
 			isa = PBXGroup;
 			children = (
@@ -121,50 +179,24 @@
 		9D5679F4181AC110003D6A4A /* proPorject */ = {
 			isa = PBXGroup;
 			children = (
-				9D5679FD181AC110003D6A4A /* YGAppDelegate.h */,
-				9D5679FE181AC110003D6A4A /* YGAppDelegate.m */,
-				9D567A00181AC110003D6A4A /* Main.storyboard */,
-				9D567A03181AC110003D6A4A /* YGFirstViewController.h */,
-				9D567A04181AC110003D6A4A /* YGFirstViewController.m */,
-				9D567A06181AC110003D6A4A /* YGSecondViewController.h */,
-				9D567A07181AC110003D6A4A /* YGSecondViewController.m */,
-				9DB54B211824B4D90030540F /* YGCalendar.h */,
-				9DB54B221824B4D90030540F /* YGCalendar.m */,
-				9DB54B28182680D50030540F /* NSDateFormatter+shared.h */,
-				9DB54B29182680D50030540F /* NSDateFormatter+shared.m */,
-				9D567A09181AC110003D6A4A /* Images.xcassets */,
-				9D5679F5181AC110003D6A4A /* Supporting Files */,
+				9D237CD51829323300F78062 /* Vendors */,
+				9D237CD4182931F300F78062 /* Resource */,
+				9D237CD3182931E500F78062 /* Models */,
+				9D237CCF1829313E00F78062 /* Application */,
+				9D237CD01829314B00F78062 /* Controllers */,
+				9D237CD11829319E00F78062 /* Library */,
 			);
 			path = proPorject;
-			sourceTree = "<group>";
-		};
-		9D5679F5181AC110003D6A4A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9D5679F6181AC110003D6A4A /* proPorject-Info.plist */,
-				9D5679F7181AC110003D6A4A /* InfoPlist.strings */,
-				9D5679FA181AC110003D6A4A /* main.m */,
-				9D5679FC181AC110003D6A4A /* proPorject-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9D567A16181AC110003D6A4A /* proPorjectTests */ = {
 			isa = PBXGroup;
 			children = (
 				9D567A1C181AC110003D6A4A /* proPorjectTests.m */,
-				9D567A17181AC110003D6A4A /* Supporting Files */,
-			);
-			path = proPorjectTests;
-			sourceTree = "<group>";
-		};
-		9D567A17181AC110003D6A4A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				9D567A18181AC110003D6A4A /* proPorjectTests-Info.plist */,
 				9D567A19181AC110003D6A4A /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			path = proPorjectTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
