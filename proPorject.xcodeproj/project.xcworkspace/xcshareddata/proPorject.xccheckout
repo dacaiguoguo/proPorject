@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>974FBBDD-47C1-4D1E-B02E-718779F62310</string>
+	<string>7E45608A-EF88-4EA9-B603-1E7C38FB12EC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>proPorject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>22575E83-17F0-4DCB-8BA2-D69ADE7BC0C2</key>
+		<key>02374C42-8D40-4804-8741-E2F456300D7F</key>
 		<string>https://github.com/dacaiguoguo/proPorject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>proPorject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>22575E83-17F0-4DCB-8BA2-D69ADE7BC0C2</key>
+		<key>02374C42-8D40-4804-8741-E2F456300D7F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>22575E83-17F0-4DCB-8BA2-D69ADE7BC0C2</string>
+	<string>02374C42-8D40-4804-8741-E2F456300D7F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>22575E83-17F0-4DCB-8BA2-D69ADE7BC0C2</string>
+			<string>02374C42-8D40-4804-8741-E2F456300D7F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>proPorject</string>
 		</dict>
