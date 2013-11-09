@@ -24,6 +24,7 @@
 		9D567A1D181AC110003D6A4A /* proPorjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D567A1C181AC110003D6A4A /* proPorjectTests.m */; };
 		9DB54B231824B4D90030540F /* YGCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB54B221824B4D90030540F /* YGCalendar.m */; };
 		9DB54B2A182680D50030540F /* NSDateFormatter+shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB54B29182680D50030540F /* NSDateFormatter+shared.m */; };
+		A8902C13182E274B00E45A46 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = A8902C12182E274B00E45A46 /* readMe.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9DB54B221824B4D90030540F /* YGCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGCalendar.m; sourceTree = "<group>"; };
 		9DB54B28182680D50030540F /* NSDateFormatter+shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+shared.h"; sourceTree = "<group>"; };
 		9DB54B29182680D50030540F /* NSDateFormatter+shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+shared.m"; sourceTree = "<group>"; };
+		A8902C12182E274B00E45A46 /* readMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				9DB54B221824B4D90030540F /* YGCalendar.m */,
 				9DB54B28182680D50030540F /* NSDateFormatter+shared.h */,
 				9DB54B29182680D50030540F /* NSDateFormatter+shared.m */,
+				A8902C12182E274B00E45A46 /* readMe.txt */,
 				9D567A09181AC110003D6A4A /* Images.xcassets */,
 				9D5679F5181AC110003D6A4A /* Supporting Files */,
 			);
@@ -246,6 +249,7 @@
 			files = (
 				9D567A0A181AC110003D6A4A /* Images.xcassets in Resources */,
 				9D5679F9181AC110003D6A4A /* InfoPlist.strings in Resources */,
+				A8902C13182E274B00E45A46 /* readMe.txt in Resources */,
 				9D567A02181AC110003D6A4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "proPorject/proPorject-Prefix.pch";
 				INFOPLIST_FILE = "proPorject/proPorject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -415,6 +420,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "proPorject/proPorject-Prefix.pch";
 				INFOPLIST_FILE = "proPorject/proPorject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

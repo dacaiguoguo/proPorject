@@ -8,14 +8,45 @@
 
 #import "YGAppDelegate.h"
 
+
 @implementation YGAppDelegate
+- (void)redirectNSLogToDocumentFolder{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fileName =[NSString stringWithFormat:@"%@.log",[NSDate date]];
+    NSString *logFilePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);
+}
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+#ifdef DEBUG
+#if TARGET_IPHONE_SIMULATOR
+
+#elif TARGET_OS_IPHONE
+    [self redirectNSLogToDocumentFolder];
+
+#endif
+#endif
     // Override point for customization after application launch.
     return YES;
 }
-							
+
+void uncaughtExceptionHandler(NSException *exception) {
+    NSLog(@"CRASH: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+    NSLog(@"Stack Address: %@", [exception callStackReturnAddresses]);
+    NSLog(@"Stack userInfo: %@", [exception userInfo]);
+
+
+    NSString *stackTrace = [[NSString alloc] initWithFormat:@"%@\n%@",exception,[exception callStackSymbols]];
+    
+    //    [[UMSAgent getInstance] saveErrorLog:stackTrace];
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
