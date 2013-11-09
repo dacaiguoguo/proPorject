@@ -21,10 +21,11 @@
     NSLog(@"%ld-%ld-%ld",(long)date.year,(long)date.month,(long)date.day);
     
     for (int i=0 ; i<7; i++) {
-        NSLog(@"weekDay = %@",[date descriptionWithLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]]);
+//        NSLog(@"weekDay = %@",[date descriptionWithLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]]);
         NSLog(@"%ld-%ld-%ld",(long)date.year,(long)date.month,(long)date.day);
+        NSLog(@"weekDay = %@",[[NSDate dateStartOfWeekWithDay:date] descriptionWithLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]]);
 
-        date = [date dateByAddingTimeInterval:-60*60*24];
+        date = [date dateByAddingTimeInterval:-60*60*24*3];
     }
 
     
